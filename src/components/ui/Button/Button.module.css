@@ -1,0 +1,52 @@
+.button {
+  composes: label from '../../../styles/typography.module.css';
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 50px;
+  padding-inline: 30px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition:
+    opacity var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.rounded {
+  border-radius: var(--radius-sm);
+}
+
+.pill {
+  padding-inline: 20px;
+  border-radius: var(--radius-pill);
+}
+
+.green {
+  color: var(--color-sand);
+  background-color: var(--color-green);
+  border-color: rgb(var(--rgb-green) / 0.5);
+}
+
+.accent {
+  color: var(--color-sand);
+  background-color: var(--color-accent);
+  border-color: rgb(var(--rgb-accent) / 0.5);
+}
+
+.sage {
+  color: var(--color-green);
+  background-color: var(--color-sage);
+  border-color: rgb(var(--rgb-green) / 0.5);
+}
+
+.outline {
+  color: var(--color-sand);
+  background-color: transparent;
+  border-color: rgb(var(--rgb-sand) / 0.5);
+}

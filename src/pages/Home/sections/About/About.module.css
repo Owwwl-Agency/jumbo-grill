@@ -1,0 +1,70 @@
+.about {
+  width: 100%;
+  padding: 163px var(--page-padding) 174px;
+  background:
+    linear-gradient(rgb(var(--rgb-sand) / 0.75), rgb(var(--rgb-sand) / 0.75)),
+    var(--color-cream);
+  box-shadow: 0 -30px 60px rgb(0 0 0 / 0.18);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24.2% minmax(0, 1fr);
+  grid-template-areas:
+    'title-start image content'
+    'title-end title-end title-end';
+  column-gap: 35px;
+  row-gap: 35px;
+  align-items: end;
+}
+
+.title {
+  display: contents;
+}
+
+.titleStart,
+.titleEnd {
+  composes: display from '../../../../styles/typography.module.css';
+  display: block;
+  color: var(--color-green);
+  text-box: trim-both cap alphabetic;
+  white-space: nowrap;
+}
+
+.titleStart {
+  grid-area: title-start;
+  justify-self: end;
+}
+
+.titleEnd {
+  grid-area: title-end;
+  padding-left: 25.6%;
+}
+
+.image {
+  grid-area: image;
+}
+
+.imageInner {
+  will-change: transform;
+}
+
+.content {
+  grid-area: content;
+  max-width: 458px;
+}
+
+.heading {
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-semibold);
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.text {
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 20px;
+}

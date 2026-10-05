@@ -1,0 +1,54 @@
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 109px;
+  height: 108px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: rgb(var(--rgb-green) / 0.7);
+  background-color: rgb(var(--rgb-sand) / 0.1);
+  border-radius: 125px;
+  backdrop-filter: blur(1.5px) saturate(1.1);
+  -webkit-backdrop-filter: blur(1.5px) saturate(1.1);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@supports (backdrop-filter: url(#a)) and (not (-webkit-hyphens: none)) {
+  .cursor {
+    backdrop-filter: url(#scroll-cursor-lens) blur(3px) saturate(0.8) brightness(1.04);
+  }
+}
+
+/* Light rim: bright on the top-left and bottom-right edges */
+.cursor::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.9) 0%,
+    rgb(255 255 255 / 0) 30%,
+    rgb(255 255 255 / 0) 70%,
+    rgb(255 255 255 / 0.9) 100%
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  pointer-events: none;
+}
+
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

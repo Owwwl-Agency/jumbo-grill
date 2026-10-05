@@ -1,0 +1,79 @@
+.section {
+  width: 100%;
+  padding-block: 140px;
+  overflow: hidden;
+  background-color: var(--color-sand-light);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 724fr) minmax(0, 616fr);
+  align-items: end;
+  padding-inline: var(--page-padding);
+}
+
+.title {
+  color: var(--color-dark);
+}
+
+.titleLine {
+  composes: display from '../../../../styles/typography.module.css';
+  display: block;
+  text-box: trim-both cap alphabetic;
+  white-space: nowrap;
+}
+
+.titleIndent {
+  margin-top: 35px;
+  padding-left: 39.1%;
+}
+
+.tagline {
+  width: 301px;
+  margin: 30px 0 0 39.1%;
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-subtitle);
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.text {
+  color: var(--color-dark);
+}
+
+.slider {
+  position: relative;
+  margin-top: 91px;
+  cursor: none;
+}
+
+.slider * {
+  cursor: none;
+}
+
+.slide {
+  width: 33.333vw;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding-inline: 25px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--color-sage);
+  background-color: rgb(var(--rgb-green) / 0.2);
+  border-radius: var(--radius-sm);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}

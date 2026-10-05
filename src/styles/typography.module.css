@@ -1,0 +1,36 @@
+.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: var(--lh-display);
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-subtitle);
+  text-transform: uppercase;
+}
+
+.body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+.label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}

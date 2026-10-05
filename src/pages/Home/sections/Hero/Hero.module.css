@@ -1,0 +1,97 @@
+.hero {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 0;
+  width: 100%;
+  height: calc(100svh - var(--header-height));
+  min-height: 600px;
+  padding: 0 var(--page-padding) var(--page-padding);
+  background-color: var(--color-sand);
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 40px 30px;
+}
+
+.image {
+  will-change: transform;
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+}
+
+.highlight {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 193px;
+}
+
+.highlightCard {
+  padding: 10px 10px 20px;
+  background-color: var(--color-sage);
+  border-radius: var(--radius-sm);
+}
+
+.highlightText {
+  composes: small from '../../../../styles/typography.module.css';
+  margin-top: 10px;
+  color: var(--color-green);
+}
+
+.highlightLink {
+  display: block;
+  margin-top: 15px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-small);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-box: trim-both cap alphabetic;
+  transition: opacity var(--transition-fast);
+}
+
+.highlightLink:hover {
+  opacity: 0.8;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 500;
+  line-height: 78px;
+  color: var(--color-cream);
+}
+
+.divider {
+  height: 1.5px;
+  margin-block: 35px 30px;
+  background-color: var(--color-sand);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.text {
+  max-width: 415px;
+  line-height: var(--lh-small);
+  color: var(--color-cream-200);
+}

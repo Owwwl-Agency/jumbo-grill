@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Plush';
+  src: url('../assets/fonts/plush/Plush-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plush';
+  src: url('../assets/fonts/plush/Plush-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plush';
+  src: url('../assets/fonts/plush/Plush-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* No upright Light / Semibold files: 300 uses Regular, 510–590 use Medium */
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/sf-pro/SFProDisplay-Medium.woff2') format('woff2');
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../assets/fonts/sf-pro/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

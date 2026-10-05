@@ -1,0 +1,164 @@
+.section {
+  display: grid;
+  grid-template-columns: minmax(0, 620fr) minmax(0, 616fr);
+  column-gap: 104px;
+  align-items: center;
+  width: 100%;
+  padding: var(--page-padding);
+  background-color: var(--color-sand-light);
+}
+
+.media {
+  display: flex;
+  align-items: center;
+  padding-inline: 30px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  color: var(--color-sand-light);
+}
+
+.titleLine {
+  composes: display from '../../../../styles/typography.module.css';
+  display: block;
+  text-box: trim-both cap alphabetic;
+}
+
+.titleEnd {
+  align-self: flex-end;
+}
+
+.heading {
+  composes: title from '../../../../styles/typography.module.css';
+  color: var(--color-dark);
+}
+
+.text {
+  margin-top: 35px;
+  color: var(--color-dark);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 35px;
+}
+
+.fields {
+  display: grid;
+  align-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  position: relative;
+  display: block;
+}
+
+.fieldWide {
+  grid-column: 1 / -1;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--color-dark);
+  background-color: var(--color-sand);
+  border: 1px solid rgb(var(--rgb-dark) / 0.15);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  border-color: rgb(var(--rgb-dark) / 0.5);
+}
+
+.textarea {
+  height: 130px;
+  padding-block: 15px;
+  resize: none;
+}
+
+.placeholder {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  display: block;
+  font-size: var(--fs-small);
+  line-height: 1;
+  color: var(--color-dark);
+  text-box: trim-both cap alphabetic;
+  pointer-events: none;
+}
+
+.input:not(:placeholder-shown) + .placeholder {
+  display: none;
+}
+
+.required {
+  color: var(--color-accent);
+}
+
+.agreement {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: var(--fs-body);
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-green);
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1.5px var(--color-green);
+}
+
+.checkboxIcon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.checkboxInput:checked + .checkbox {
+  box-shadow: none;
+}
+
+.checkboxInput:checked + .checkbox .checkboxIcon {
+  visibility: visible;
+}
+
+.checkboxInput:focus-visible + .checkbox {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+.submit {
+  margin-top: 30px;
+}
